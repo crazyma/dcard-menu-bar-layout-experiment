@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"
+        android:elevation="4dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/categoryButton"
+            style="@style/AppCompatTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:background="#dfd"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_dropdown_18dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="?android:textColorSecondary"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/rulesTextView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/forumButtonDividerImageView"
+            tools:text="標題分類" />
+
+        <Space
+            android:id="@+id/categoryReservedSpace"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/rulesTextView" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/categoryBarrier"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="categoryButton, categoryReservedSpace" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forumButton"
+            style="@style/AppCompatTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#fdd"
+            android:drawableEnd="@drawable/ic_dropdown_18dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="?android:textColorSecondary"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/forumButtonDividerImageView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="看板名稱" />
+
+        <ImageView
+            android:id="@+id/forumButtonDividerImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/categoryBarrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rulesTextView"
+            style="@style/AppCompatTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ddf"
+            android:clickable="true"
+            android:minWidth="0dp"
+            android:padding="8dp"
+            android:text="板規"
+            android:textAppearance="?textAppearanceButton"
+            android:textColor="@color/accent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="看板名稱">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/forumEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="看板名稱" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forumDebugTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?textAppearanceCaption"
+            tools:text="0dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="標題分類">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/categoryEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="標題分類" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/categoryDebugTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?textAppearanceCaption"
+            tools:text="0dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="?android:listDivider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="保留寬度"
+            android:textAppearance="?textAppearanceCaption" />
+
+        <SeekBar
+            android:id="@+id/reservedWidthSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="180"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:progress="100" />
+
+        <TextView
+            android:id="@+id/reservedWidthDebugTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="100dp"
+            android:textAppearance="?textAppearanceCaption" />
+    </LinearLayout>
+</LinearLayout>

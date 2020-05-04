@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppCompatTextButton" parent="Widget.AppCompat.Button.Borderless">
+		<item name="android:minHeight">36dp</item>
+		<item name="android:minWidth">64dp</item>
+		<item name="android:background">@drawable/text_button_default_background</item>
+		<item name="android:textAppearance">?textAppearanceButton</item>
+		<item name="android:paddingLeft">8dp</item>
+		<item name="android:paddingRight">8dp</item>
+		<item name="android:paddingTop">8dp</item>
+		<item name="android:paddingBottom">8dp</item>
+		<item name="android:drawablePadding">4dp</item>
+	</style>
+</resources>

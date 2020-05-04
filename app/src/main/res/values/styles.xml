@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimaryVariant">@color/dcard_blue</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSecondaryVariant">@color/dcard_blue</item>
+        <item name="textInputStyle">
+            @style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="android:statusBarColor">@color/dcard_blue</item>
+        <item name="appBarLayoutStyle">@style/AppTheme.AppBarLayout</item>
+        <item name="actionBarTheme">@style/AppTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+    </style>
+
+    <style name="AppTheme.AppBarLayout" parent="@style/Widget.MaterialComponents.AppBarLayout.Primary">
+        <item name="android:background">@color/dcard_blue</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:colorBackground">@color/dcard_blue</item>
+    </style>
+
+    <style name="AppTheme.ActionBarStyle" parent="Widget.MaterialComponents.Light.ActionBar.Solid">
+        <item name="background">@color/dcard_blue</item>
+        <item name="backgroundStacked">@color/dcard_blue</item>
+        <item name="backgroundSplit">@color/dcard_blue</item>
+    </style>
+
+</resources>
