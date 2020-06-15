@@ -1,8 +1,9 @@
 package com.hiking.postcategorylayoutexperiment
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updateLayoutParams
 import androidx.core.widget.doOnTextChanged
 import kotlinx.android.synthetic.main.activity_main.*
@@ -37,6 +38,9 @@ class MainActivity : AppCompatActivity() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+        enableCategoryCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            categoryButton.visibility = if (isChecked) View.VISIBLE else View.GONE
+        }
         calcSize()
     }
 

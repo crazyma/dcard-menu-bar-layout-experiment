@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
-            android:background="#dfd"
+            android:background="#10f0"
             android:clickable="true"
             android:drawableEnd="@drawable/ic_dropdown_18dp"
             android:drawablePadding="4dp"
@@ -35,7 +35,7 @@
             app:layout_constraintEnd_toStartOf="@id/rulesTextView"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/forumButtonDividerImageView"
-            tools:text="標題分類" />
+            tools:text="標" />
 
         <Space
             android:id="@+id/categoryReservedSpace"
@@ -49,14 +49,14 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:barrierDirection="start"
-            app:constraint_referenced_ids="categoryButton, categoryReservedSpace" />
+            app:constraint_referenced_ids="categoryButton, categoryReservedSpace, rulesTextView" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/forumButton"
             style="@style/AppCompatTextButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#fdd"
+            android:background="#1f00"
             android:drawableEnd="@drawable/ic_dropdown_18dp"
             android:drawablePadding="4dp"
             android:ellipsize="end"
@@ -69,7 +69,7 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="看板名稱" />
+            tools:text="看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱" />
 
         <ImageView
             android:id="@+id/forumButtonDividerImageView"
@@ -87,7 +87,7 @@
             style="@style/AppCompatTextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ddf"
+            android:background="#100f"
             android:clickable="true"
             android:minWidth="0dp"
             android:padding="8dp"
@@ -176,5 +176,13 @@
             android:layout_marginTop="8dp"
             android:text="100dp"
             android:textAppearance="?textAppearanceCaption" />
+
+        <CheckBox
+            android:id="@+id/enableCategoryCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="顯示分類按鈕" />
     </LinearLayout>
 </LinearLayout>
