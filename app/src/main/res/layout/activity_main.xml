@@ -67,9 +67,8 @@
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@id/forumButtonDividerImageView"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱看板名稱" />
+            tools:text="稱看板名稱" />
 
         <ImageView
             android:id="@+id/forumButtonDividerImageView"
@@ -79,8 +78,9 @@
             android:layout_marginBottom="8dp"
             android:background="?android:listDivider"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/categoryBarrier"
+            app:layout_constraintStart_toEndOf="@id/forumButton"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/rulesTextView"
